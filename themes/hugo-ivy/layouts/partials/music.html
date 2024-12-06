@@ -1,0 +1,33 @@
+<div class="container">
+    <div id="aplayer"></div>
+</div>
+<script>
+const ap = new APlayer({
+    container: document.getElementById('aplayer'),
+    autoplay: true,
+    loop: 'all',
+    preload: 'auto',
+    listFolded: false,
+    audio: [
+        {{ if .Params.songs }} 
+            {{ range $s := .Params.songs }}
+                {
+                    name: '{{$s.song}}',
+                    artist: '{{$s.artist}}',
+                    url: '{{$s.songUrl}}',
+                    cover: '{{$s.songCover}}',
+                },
+            {{ end }}        
+        {{ end }}
+        {{ if .Params.song }} 
+                {
+                    name: '{{.Params.song}}',
+                    artist: '{{.Params.artist}}',
+                    url: '{{.Params.songUrl}}',
+                    cover: '{{.Params.songCover}}',
+                }
+        {{ end }}
+
+    ]
+});
+</script>

@@ -1,0 +1,100 @@
+baseurl: "https://luhuanz.github.io/"
+languageCode: "zh-cn"
+title: "Jh|佳欢"
+theme: "hugo-ivy"
+googleAnalytics: "G-Z0WP34Z9WY"
+disqusShortname: ""
+ignoreFiles: ["\\.Rmd$", "\\.Rmarkdown$", "_cache$"]
+preserveTaxonomyNames: true
+footnotereturnlinkcontents: "↩"
+enableGitInfo: true
+
+permalinks:
+  note: /note/:year/:month/:day/:slug/
+  post: /post/:year/:month/:day/:slug/
+  blog: /blog/:year/:month/:day/:slug/
+
+taxonomies:
+  category: categories
+  tag: tags
+
+menu:
+  main:
+    - name: "首页"
+      url: "/"
+      weight: 1
+    - name: "归档"
+      url: "/posts/"
+      weight: 2
+    - name: "日常"
+      url: "/todos/"
+      weight: 3
+    - name: "数学"
+      url: "/maths/"
+      weight: 4
+    - name: "编程"
+      url: "/code/"
+      weight: 5
+    - name: "关于"
+      url: "/about/"
+      weight: 6
+    - name: "标签"
+      url: "/tags/"
+      weight: 7
+
+params:
+  description: "我唯一知道的是我一无所知。"
+  footer: "&copy; [Jia huan](https://github.com/Luhuanzm) 2023-{Year} | [Github](https://github.com/Luhuanz)"
+  highlightjsLang: ["latex"]
+  highlightjsTheme: "github"
+  highlightjsVersion: "11.7.0"
+  customJS:
+    - "comment-utils.js"
+    - "fix-toc.js"
+    - "center-img.js"
+    - "right-quote.js"
+    - "fix-footnote.js"
+    - "math-code.js"
+    - "hash-notes.js"
+    - "toggle-notes.js"
+    - "post-nav.js"
+    - "external-link.js"
+    - "alt-title.js"
+    - "heading-anchor.js"
+    - "key-buttons.js"
+  customCSS:
+    - "key-buttons.css"
+
+  logo:
+    en:
+      img: "https://cdn.jsdelivr.net/gh/Luhuanz/hugocdn@master/logo/logo.png"
+      url: "/"
+      alt: "Jh LU"
+      tag: ""
+  
+  cover:
+    img: "https://cdn.jsdelivr.net/gh/Luhuanz/hugocdn@master/logo/gb.jpg"
+
+  author:
+    en: "Luke"
+    cn: "佳欢"
+
+  lang:
+    edit:
+      cn: "编辑"
+    license:
+      cn: "版权"
+    subscribe:
+      cn: "订阅"
+
+markup:
+  highlight:
+    codeFences: false
+  goldmark:
+    renderer:
+      unsafe: true
+    parser:
+      autoHeadingIDType: blackfriday
+  tableOfContents:
+    startLevel: 1
+
